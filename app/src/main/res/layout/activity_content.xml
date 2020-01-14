@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/im"
+                android:scaleType="fitXY"
+                android:layout_height="250dp">
+
+            </ImageView>
+            <TextView
+                android:layout_width="match_parent"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:id="@+id/Title"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/Date"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/publisher"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/Content1"
+                android:fontFamily="@font/regular"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Read More.."
+                android:textColor="@color/colorAccent"
+                android:id="@+id/t5"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_width="60dp"
+                    android:id="@+id/share"
+                    android:background="@drawable/ic_share_black_24dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="40dp"/>
+            </RelativeLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-1155294506749467/3571164878">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
